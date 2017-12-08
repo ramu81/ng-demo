@@ -17,7 +17,7 @@ describe('SearchService', () => {
         {provide: BaseRequestOptions, useClass: BaseRequestOptions}
       ]
     });
-  });
+
 
   it('should be created', inject([SearchService], (service: SearchService) => {
     expect(service).toBeTruthy();
@@ -71,3 +71,4 @@ it('should fetch by id',
     expect(res[0].name).toBe('Gary Kubiak');
   }))
 );
+});
