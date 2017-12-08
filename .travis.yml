@@ -20,6 +20,7 @@ branches:
   only:
   - master
 before_install:
+  - ng set --global warnings.versionMismatch=false
   - export CHROME_BIN=/usr/bin/google-chrome
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
@@ -29,6 +30,7 @@ before_install:
   - yarn global add @angular/cli
 install:
   - yarn install
+   - ng e2e
 script:
   - ng test --watch false
 notifications:
