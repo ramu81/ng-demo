@@ -30,9 +30,7 @@ before_install:
 install:
   - yarn install
 script:
-  - ng set --global warnings.versionMismatch=false
   - ng test --watch false
-  - ng e2e
 notifications:
   webhooks:
     on_success: change
