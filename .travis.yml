@@ -29,8 +29,7 @@ before_install:
   - yarn global add @angular/cli
 install:
   - yarn install  
-script:
-  - ng set --global warnings.versionMismatch=false
+script: 
   - ng test --watch false
   - ng e2e
 notifications:
